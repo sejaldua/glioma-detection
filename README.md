@@ -1,29 +1,29 @@
-Topic: Automated brain tumor detection and segmentation using threshold density algorithm with logistic regression and ROC error analysis
+### Topic: Automated brain tumor detection and segmentation using threshold density algorithm with logistic regression and ROC error analysis
 
-Author: Sejal Dua
-Date: 5/10/2018
+##### Author: Sejal Dua
+##### Date: 5/10/2018
 
-OVERVIEW
+### OVERVIEW
 
 The files in this directory pertain to gliomas (brain tumors) and how MATLAB handles neuroimage processing using edge segmentation as well as density thresholds. 
 
-WHERE TO START
+### WHERE TO START
 
 To begin, take a look at MasterScript.m. You will want to look at each function and script individually, but let it walk you through the entire project first before you explore further. Hit run and when it prompts you to evaluate the accuracy of the tumor detection function, press ‘y’ to run the detection.m file. This is the user evaluation portion of my project, during which YOU will manually evaluate the accuracy of my program’s automated tumor detection capabilities. First, I highly recommend you check out the subplot figure that pops up as it contains a clear representation of all the images I was working with through the course of this project. After viewing the images, it is time to move onto the user input portion. Remember: hit the ‘Enter’ key if the image displayed on the rightmost side of the figure properly depicts the outlines of the glioma. Hit the ’n’ key and then the ‘Enter’ key if some other region of the MRI scan is outlined (not the tumor). This process will take roughly 2-4 minutes for all 15 images and 9 thresholds, so please be patient. Also, the last 5 images should yield the message box “No tumors were detected for this threshold” roughly 45 times. If this happens, that is what is supposed to happen. Just let the program do its thing. 
 
 For the second phase of my project, an error analysis consisting of 3 figures and one Matlab generated image/figure will pop up. Take a look at these figures and then close them. The command window will ask if you are ready to interact with the custom error analysis GUI window. Respond by hitting the ‘y’ key followed by the ‘Enter’ key. Play around with the checkboxes. Note: hitting the ‘GO!’ push button doesn’t update the graphs; it simply saves new data. To plot this new data, you have to click on the push buttons directly under each graph. Tip: try selecting images 1-5 alone, 6-10 alone, or 1-10 to analyze the accuracy of the tumor detection function with respect to specific data of known ‘benign’ or ‘malignant’ classification. That’s pretty much the gist of my project. After you see the message “That’s my project! Thank you!” in the command window, you have made it through my master script. From there, I recommend you check out the ‘tumorStats.txt’ file and then watch the videos I uploaded to youtube. I hope you find this project interesting!
 
-DATA INPUT
+### DATA INPUT
 
-• All the data for input is provided in the files given. Specifically, take a look at what is stored in inputData.mat and what is stored in inputImages.jpg after running the detection.m script.
-• The data you will be inputting is the evaluation of the tumor detection accuracy via ‘Enter’ key or ’n’ key. This logical data will then be 
-• Finally, you will again input data by selecting images for which you want a specified error analysis.
+- All the data for input is provided in the files given. Specifically, take a look at what is stored in inputData.mat and what is stored in inputImages.jpg after running the detection.m script.
+- The data you will be inputting is the evaluation of the tumor detection accuracy via ‘Enter’ key or ’n’ key. 
+- Finally, you will again input data by selecting images for custom error analysis.
 
->> inputData.mat - holds a cell array of the 15 images imported via imread as well as their corresponding glioma classification (1 for benign, 2 for malignant, 0 for no tumor).
->> detection.mat - holds the ‘isDetected’ cell array, ‘knownClassification’ vector, ‘thresholds’, and ‘tumorStats’. This .mat file is loaded at the beginning of the ‘errorAnalysis.m’ script as well as the ‘customErrorAnalysis.m’ function.
->> guiPlotting.mat - holds a long list of variables which are used to update the graphs in the GUI window depending on which checkboxes are selected by the user.
+* inputData.mat - holds a cell array of the 15 images imported via imread as well as their corresponding glioma classification (1 for benign, 2 for malignant, 0 for no tumor).
+* detection.mat - holds the ‘isDetected’ cell array, ‘knownClassification’ vector, ‘thresholds’, and ‘tumorStats’. This .mat file is loaded at the beginning of the ‘errorAnalysis.m’ script as well as the ‘customErrorAnalysis.m’ function.
+* guiPlotting.mat - holds a long list of variables which are used to update the graphs in the GUI window depending on which checkboxes are selected by the user.
 
-OUTPUT FILES
+### OUTPUT FILES
 
 1. inputImages.jpg - A 5x3 subplot of all the images this project will be working with. The first 5 are benign glioma MRI scans, the second 5 are malignant glioma MRI scans, and the last 5 are clean MRI scans (no tumor presented). 
 
@@ -36,7 +36,7 @@ OUTPUT FILES
 5. performanceAnalysis.fig - Two figures that offer the most meaningful analysis of the tumor detection function. The first one plots classification rates vs. thresholds, depicting the percentage of images for which the function detected the tumor perfectly, inaccurately, or inadvertently– at each respective density threshold. The second figure plots performance analysis statistics such as performance index, sensitivity, specificity, and accuracy against the 9 density thresholds (see PPT to learn more about performance analysis statistics).
 
 
-FUNCTIONS AND SCRIPTS
+### FUNCTIONS AND SCRIPTS
 
 1. ‘MasterScript.m’ script >> calls scripts and functions / outlines the whole project so that you don’t need to manually run anything if you do not want to.
 
@@ -52,7 +52,7 @@ FUNCTIONS AND SCRIPTS
 
 7. ‘customErrorAnalysis.m’ function >> essentially does the same thing as the ‘errorAnalysis’ script. The only difference is that it takes the argument checkboxValues, makes a vector called indices which saves the indices at which checkboxValues holds 1s. It extracts data from these specific indices and then saves all the variables needed to plot a new graph into the .mat file called ‘guiPlotting.mat.’ Since this function is called from inside the pushbutton1 callback function and so many different variables are needed to plot the new graphs, the .mat file is used instead of assigning all important variables to a long list of outputs in the function.
 
-USEFUL DEFINITIONS
+### USEFUL DEFINITIONS
 
 1. Glioma - a cancerous tumor of the brain that begins in glial cells (cells that surround and support nerve cells).
 
