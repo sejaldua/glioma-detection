@@ -7,6 +7,15 @@
 
 The files in this directory pertain to gliomas (brain tumors) and how MATLAB handles neuroimage processing using edge segmentation as well as density thresholds. 
 
+### VIDEOS
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=u6mCYWGO8yE&t=6s" target="_blank"><img src="http://img.youtube.com/vi/u6mCYWGO8yE&t=6s/0.jpg" 
+alt="Glioma Detection Algorithm in Action" width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=pbht9LwJWOc&t=11s" target="_blank"><img src="http://img.youtube.com/vi/pbht9LwJWOc&t=11s/0.jpg" 
+alt="Neuroimage Processing and Tumor Detection with Logistic Regression Analysis" width="240" height="180" border="10" /></a>
+
+
 ### WHERE TO START
 
 To begin, take a look at MasterScript.m. You will want to look at each function and script individually, but let it walk you through the entire project first before you explore further. Hit run and when it prompts you to evaluate the accuracy of the tumor detection function, press ‘y’ to run the detection.m file. This is the user evaluation portion of my project, during which YOU will manually evaluate the accuracy of my program’s automated tumor detection capabilities. First, I highly recommend you check out the subplot figure that pops up as it contains a clear representation of all the images I was working with through the course of this project. After viewing the images, it is time to move onto the user input portion. Remember: hit the ‘Enter’ key if the image displayed on the rightmost side of the figure properly depicts the outlines of the glioma. Hit the ’n’ key and then the ‘Enter’ key if some other region of the MRI scan is outlined (not the tumor). This process will take roughly 2-4 minutes for all 15 images and 9 thresholds, so please be patient. Also, the last 5 images should yield the message box “No tumors were detected for this threshold” roughly 45 times. If this happens, that is what is supposed to happen. Just let the program do its thing. 
@@ -19,9 +28,9 @@ For the second phase of my project, an error analysis consisting of 3 figures an
 - The data you will be inputting is the evaluation of the tumor detection accuracy via ‘Enter’ key or ’n’ key. 
 - Finally, you will again input data by selecting images for custom error analysis.
 
-* inputData.mat - holds a cell array of the 15 images imported via imread as well as their corresponding glioma classification (1 for benign, 2 for malignant, 0 for no tumor).
-* detection.mat - holds the ‘isDetected’ cell array, ‘knownClassification’ vector, ‘thresholds’, and ‘tumorStats’. This .mat file is loaded at the beginning of the ‘errorAnalysis.m’ script as well as the ‘customErrorAnalysis.m’ function.
-* guiPlotting.mat - holds a long list of variables which are used to update the graphs in the GUI window depending on which checkboxes are selected by the user.
+> * inputData.mat - holds a cell array of the 15 images imported via imread as well as their corresponding glioma classification (1 for benign, 2 for malignant, 0 for no tumor).
+> * detection.mat - holds the ‘isDetected’ cell array, ‘knownClassification’ vector, ‘thresholds’, and ‘tumorStats’. This .mat file is loaded at the beginning of the ‘errorAnalysis.m’ script as well as the ‘customErrorAnalysis.m’ function.
+> * guiPlotting.mat - holds a long list of variables which are used to update the graphs in the GUI window depending on which checkboxes are selected by the user.
 
 ### OUTPUT FILES
 
