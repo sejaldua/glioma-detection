@@ -1,19 +1,19 @@
-ImageNum	Classification	TumorArea	BrainArea	AreaRatio
-1	benign	6150	62152	0.1
-2	benign	2708	43304	0.06
-3	benign	3972	38491	0.1
-4	benign	10906	112681	0.1
-5	benign	1612	16965	0.1
-6	malignant	9134	305089	0.03
-7	malignant	17865	490381	0.04
-8	malignant	1945	50149	0.04
-9	malignant	6124	80422	0.08
-10	malignant	47418	598854	0.08
-11	no tumor	0	0	0
-12	no tumor	0	0	0
-13	no tumor	0	0	0
-14	no tumor	0	0	0
-15	no tumor	0	0	0
+ImageNum	Classification	TumorArea       BrainArea	AreaRatio
+1	        benign	        6150	        62152	        0.1
+2	        benign	        2708	        43304	        0.06
+3	        benign	        3972	        38491	        0.1
+4	        benign	        10906        	112681	        0.1
+5	        benign	        1612	        16965	        0.1
+6	        malignant	9134	        305089	        0.03
+7	        malignant	17865	        490381	        0.04
+8	        malignant	1945	        50149	        0.04
+9	        malignant	6124	        80422	        0.08
+10	        malignant	47418	        598854	        0.08
+11	        no tumor	0	        0         	0
+12	        no tumor	0	        0         	0
+13	        no tumor	0	        0         	0
+14	        no tumor	0	        0         	0
+15	        no tumor	0	        0         	0
 
 
 Tumor Statistics by Classification
